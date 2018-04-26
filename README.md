@@ -6,7 +6,7 @@ Gibson Env介绍
 
 效果图：我们动态地模拟了斯坦福计算机系(Gates Building)一楼的真实场景，让虚拟机器人可以在其中进行探索，学习真实世界。我们在Gibson Environment里可以同时“激活”大量类似的机器人。喜欢电影黑客帝国的读者可能对这个概念并不陌生。
 
-通过Gibson Environment，我们可以把真实的场景(例如家庭住宅，学校，办公室)虚拟化，以节约大量在真实环境训练机器人的资源。另一方面，我们可以把虚拟环境中训练出来的机器人部署到真实环境。这为实现真实的强化学习提供了有力的基础。目前Gibson Environment已经完全开源，正在Beta测试阶段。有兴趣的读者可以在网站(gibson.vision)上使用我们的源代码。
+通过Gibson Environment，我们可以把真实的场景(例如家庭住宅，学校，办公室)虚拟化，以节约大量在真实环境训练机器人的资源。另一方面，我们可以把虚拟环境中训练出来的机器人部署到真实环境。这为实现真实的强化学习提供了有力的基础。目前Gibson Environment已经完全开源，正在Beta测试阶段。有兴趣的读者可以在网站([gibson.vision](http://gibson.vision))上使用我们的源代码。
 
 [[项目地址]](http://gibson.vision)  [[论文]](http://gibson.vision/Gibson_CVPR2018.pdf) [[Github地址]](https://github.com/StanfordVL/GibsonEnv) [[视频介绍]](https://www.youtube.com/watch?v=KdxuZjemyjc)
 
@@ -38,7 +38,7 @@ Gibson Environment的名字来源于美国认知心理学之父James J. Gibson�
 
 方法的输入是环境的3D模型（比较粗糙）和一系列视角采集到的图片。对于要渲染的任意一个视点，我们选取周围的k个视点，将每个视点的每个像素投射到3D模型上，得到一个三维点云。之后，我们对3D点云进行简单的双线性插值，得到一个初步的渲染结果。不同于常见3D模型材质渲染的方法，我们对于不同的视点选取材质的方法是自适应的（更近的视点采样更多）。在此之上为了还原更多微细节（例如植物，无法被实景扫描捕捉），我们使用一个卷积神经网络对渲染进行后处理。具体技术细节可以参考原论文。
 
-我们项目的另一个创新是把像素级别域迁移(pixel level domain adaptation)的机制嵌入到渲染引擎当中。我们的后处理网络(f)可以让渲染看起来像真实世界中的照片，与此同时我们还训练了另外一个网络(u)，让真实世界中的图片看上去像我们的渲染。这样做简化了机器人在真实世界的部署：只需要在机器人的传感器上接入我们的网络，就像给机器人戴上了一副虚拟的“眼镜”(goggles)。
+我们项目的另一个创新是把像素级别域迁移(Pixel Level Domain Adaptation)的机制嵌入到渲染引擎当中。我们的后处理网络(f)可以让渲染看起来像真实世界中的照片，与此同时我们还训练了另外一个网络(u)，让真实世界中的图片看上去像我们的渲染。这样做简化了机器人在真实世界的部署：只需要在机器人的传感器上接入我们的网络，就像给机器人戴上了一副虚拟的“眼镜”(goggles)。
 
 ![](http://gibson.vision/public/img/figure4.jpg)
 
@@ -48,9 +48,9 @@ Gibson Environment的名字来源于美国认知心理学之父James J. Gibson�
 
 ![](http://gibson.vision/public/img/figure1.jpg)
 
-斯坦福视觉实验室（Stanford Vision Lab）是最早将这样的数据应用于科研的实验室。在[Stanford 2D3DS](http://buildingparser.stanford.edu/dataset.html)项目中，研究院将斯坦福大学6栋主要建筑进行了扫描，并取得了一系列突破。在此之后，被应用于科研的实景扫描数据量呈指数式增长。
+斯坦福视觉实验室（Stanford Vision Lab）是最早将这样的数据应用于科研的实验室。在[Stanford 2D3DS](http://buildingparser.stanford.edu/dataset.html)项目中，研究者将斯坦福大学6栋主要建筑进行了扫描，并取得了一系列突破。在此之后，被应用于科研的实景扫描数据量呈指数式增长。
 
-Gibson Environment可以模拟任何被扫描过的真实环境，这是它的一个巨大有点。你完全可以扫描自己的房子，然后用Gibson Environment为之生成一个虚拟的环境，训练你的扫地机器人。在我们CVPR18的论文中，我们收集并开源了572个建筑物(1440层)的扫描。作为现有最大的数据集，我们比同类数据集(例如matterport3D)大约一个数量级。目前我们已经[在这里](https://github.com/StanfordVL/GibsonEnv)发布了一小部分数据集作为环境Beta测试的一部分，主要的数据集将会在近期发布。
+Gibson Environment可以模拟任何被扫描过的真实环境，这是它的一个巨大优点。你完全可以扫描自己的房子，然后用Gibson Environment为之生成一个虚拟的环境，训练你的扫地机器人。在我们CVPR18的论文中，我们收集并开源了572个建筑物(1440层)的扫描。作为现有最大的数据集，我们比同类数据集(例如matterport3D)大约一个数量级。目前我们已经[在这里](https://github.com/StanfordVL/GibsonEnv)发布了一小部分数据集作为环境Beta测试的一部分，主要的数据集将会在近期发布。
 
 ## 讨论
 
