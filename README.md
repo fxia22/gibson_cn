@@ -1,6 +1,6 @@
 Gibson Env介绍
 ==========
-很高兴给大家介绍我们入选CVPR2018年的项目Gibson Environment。这是一个主要适用于机器人导航任务的模拟平台。我们在传统的图形学渲染管线基础上进行了创新，使用神经网络作为渲染引擎(neural network rendering engine)，达到了近乎真实环境的渲染效果。通过和物理引擎的融合，我们可以做到在计算机里1:1地模拟真实环境： 
+很高兴给大家介绍我们入选CVPR2018年的项目Gibson Environment。这是一个主要适用于机器人导航任务的模拟平台。我们在传统的图形学渲染管线基础上进行了创新，使用神经网络作为渲染引擎(Neural Network Rendering Engine)，达到了近乎真实环境的渲染效果。通过和物理引擎的融合，我们可以做到在计算机里1:1地模拟真实环境： 
 
 ![](https://raw.githubusercontent.com/StanfordVL/GibsonEnv/master/misc/ui.gif)
 
@@ -15,7 +15,7 @@ Gibson Env介绍
 
 ![](https://hsto.org/web/8d6/0b2/d87/8d60b2d875ab4206a47bc2f1e19eb53e.gif)
 
-传统机器人领域倾向于将一个复杂的任务分成感知(perception)模块和决策(planning)模块，而强化学习让我们可以端到端地学习到更复杂的控制(end to end control/sensorimotor control)，即输入为传感器信息，直接输出控制信号。目前最前沿的强化学习算法已经在很多端到端任务上获得了的成功，例如在游戏中学会解迷宫，在不平的路面上学会行走。在自动驾驶中，从摄像头拍到的画面，我们可以直接预测方向盘的转角和油门刹车。
+传统机器人领域倾向于将一个复杂的任务分成感知(perception)模块和决策(planning)模块，而强化学习让我们可以端到端地学习到更复杂的控制(End-to-end Control/Sensorimotor Control)，即输入为传感器信息，直接输出控制信号。目前最前沿的强化学习算法已经在很多端到端任务上获得了的成功，例如在游戏中学会解迷宫，在不平的路面上学会行走。在自动驾驶中，从摄像头拍到的画面，我们可以直接预测方向盘的转角和油门刹车。
 
 ![](https://storage.googleapis.com/deepmind-live-cms/documents/ezgif.com-resize_8knzk3G.gif)
 
