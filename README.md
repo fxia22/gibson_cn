@@ -29,8 +29,8 @@ Gibson Env介绍
 
 ## 数据集
 
-我们使用从真实环境中获得的3D扫描作为数据集来进行渲染。一个典型的数据集是[2D3DS](http://buildingparser.stanford.edu/dataset.html)。
-2D3DS包含6个建筑物，Gibson使用的数据集在此基础上进行了延伸，一共包含572个建筑物和1440层。相比与类似的数据集matterport3D，我们的数据集大约多一个数量级。
+任何真实环境中获得的扫描都可以作为我们这个方法的数据集。一个典型的数据集是[2D3DS](http://buildingparser.stanford.edu/dataset.html)。
+2D3DS包含6个建筑物，我们在此基础上进行了延伸，收集了更多的数据，一共包含572个建筑物和1440层。相比与类似的数据集matterport3D，我们的数据集大约多一个数量级，是目前同种类中最大的。目前我们已经[在这里](https://github.com/StanfordVL/GibsonEnv)发布了一小部分数据集作为环境beta测试的一部分，主要的数据集将会在近期发布。
 
 ## 讨论
 
