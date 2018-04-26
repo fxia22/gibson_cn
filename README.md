@@ -37,5 +37,6 @@ Gibson Env介绍
 
 ## ROS demo
 
+由于面向的是机器人的应用，我们集成了Gibson Env和机器人操作系统，ros的用户可以方便地使用Gibson Env作为模拟器，来模拟摄像头或者kinect输入。下图是用Gibson模拟器模拟机器人建图(mapping)的一个简单的demo。
 
 ![](https://raw.githubusercontent.com/StanfordVL/GibsonEnv/57e4b8ca08a2363f098d0c742dc35197c0866837/misc/slam.png)
