@@ -3,9 +3,10 @@ Gibson Env介绍
 很高兴给大家介绍我们入选CVPR2018年的项目Gibson Environment。这是一个主要适用于机器人导航任务的模拟平台。我们在传统的图形学渲染管线基础上进行了创新，使用神经网络作为渲染引擎(neural network rendering engine)，达到了近乎真实环境的渲染效果。通过和物理引擎的融合，我们可以做到在计算机里1:1地模拟真实环境： 
 
 ![](https://raw.githubusercontent.com/StanfordVL/GibsonEnv/master/misc/ui.gif)
+
 效果图：我们动态地模拟了斯坦福计算机系(Gates Building)一楼的真实场景，让虚拟机器人可以进行探索，学习。我们在Gibson Environment里可以同时“激活”大量类似的机器人。喜欢电影黑客帝国的读者可能不会对这个概念感觉陌生。
 
-通过Gibson Environment，我们可以把真实的场景(例如家庭住宅，学校，办公室)虚拟化，节省了在真实环境训练机器人的大量时间和金钱成本。另一方面，我们可以把虚拟环境中训练出来的机器人部署到真实环境。这为实习强化学习提供了有力的基础。
+通过Gibson Environment，我们可以把真实的场景(例如家庭住宅，学校，办公室)虚拟化，节省了在真实环境训练机器人的大量时间和金钱成本。另一方面，我们可以把虚拟环境中训练出来的机器人部署到真实环境。这为实习强化学习提供了有力的基础。目前Gibson Environment已经完全开源，正在Beta测试阶段。有兴趣的读者可以在Github上使用我们的源代码。
 
 [[项目地址]](http://gibson.vision)  [[论文]](http://gibson.vision/Gibson_CVPR2018.pdf) [[Github地址]](https://github.com/StanfordVL/GibsonEnv) [[视频介绍]](https://www.youtube.com/watch?v=KdxuZjemyjc)
 
@@ -45,8 +46,13 @@ Gibson Environment的名字来源于美国认知心理学之父James J. Gibson�
 
 ## 数据集
 
-任何真实环境中获得的扫描都可以作为我们这个方法的数据集。一个典型的数据集是[2D3DS](http://buildingparser.stanford.edu/dataset.html)。
-2D3DS包含6个建筑物，我们在此基础上进行了延伸，收集了更多的数据，一共包含572个建筑物和1440层。相比与类似的数据集matterport3D，我们的数据集大约多一个数量级，是目前同种类中最大的。目前我们已经[在这里](https://github.com/StanfordVL/GibsonEnv)发布了一小部分数据集作为环境beta测试的一部分，主要的数据集将会在近期发布。
+近年来随着实景扫描技术的进步，有大量的楼房，住宅，真实场所被扫描并保存成了虚拟档案。最初，这样的档案主要被应用于房地产网络销售。
+
+![](http://buildingparser.stanford.edu/images/3Dmodal.png)
+
+斯坦福视觉实验室（Stanford Vision Lab）是最早将这样的数据应用于科研的实验室。在[Stanford 2D3DS](http://buildingparser.stanford.edu/dataset.html)项目中，研究院将斯坦福大学6栋主要建筑进行了扫描，并取得了一系列突破。在此之后，被应用于科研的实景扫描数据量呈指数式增长。
+
+Gibson Environment可以模拟任何被扫描过的真实环境，这是它的一个巨大有点。你完全可以扫描自己的房子，然后用Gibson Environment为之生成一个虚拟的环境，训练你的扫地机器人。在我们CVPR18的论文中，我们收集并开源了572个建筑物(1440层)的扫描。作为现有最大的数据集，我们比同类数据集(例如matterport3D)大约一个数量级。目前我们已经[在这里](https://github.com/StanfordVL/GibsonEnv)发布了一小部分数据集作为环境Beta测试的一部分，主要的数据集将会在近期发布。
 
 ## 讨论
 
