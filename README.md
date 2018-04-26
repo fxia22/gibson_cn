@@ -6,20 +6,18 @@ Gibson Env介绍
 
 效果图：我们动态地模拟了斯坦福计算机系(Gates Building)一楼的真实场景，让虚拟机器人可以进行探索，学习。我们在Gibson Environment里可以同时“激活”大量类似的机器人。喜欢电影黑客帝国的读者可能不会对这个概念感觉陌生。
 
-通过Gibson Environment，我们可以把真实的场景(例如家庭住宅，学校，办公室)虚拟化，节省了在真实环境训练机器人的大量时间和金钱成本。另一方面，我们可以把虚拟环境中训练出来的机器人部署到真实环境。这为实习强化学习提供了有力的基础。目前Gibson Environment已经完全开源，正在Beta测试阶段。有兴趣的读者可以在Github上使用我们的源代码。
+通过Gibson Environment，我们可以把真实的场景(例如家庭住宅，学校，办公室)虚拟化，节省了在真实环境训练机器人的大量时间和金钱成本。另一方面，我们可以把虚拟环境中训练出来的机器人部署到真实环境。这为实习强化学习提供了有力的基础。目前Gibson Environment已经完全开源，正在Beta测试阶段。有兴趣的读者可以在网站(gibson.vision)上使用我们的源代码。
 
 [[项目地址]](http://gibson.vision)  [[论文]](http://gibson.vision/Gibson_CVPR2018.pdf) [[Github地址]](https://github.com/StanfordVL/GibsonEnv) [[视频介绍]](https://www.youtube.com/watch?v=KdxuZjemyjc)
 
 ## 背景
 2016年起，伴随深度强化学习的兴起，计算机视觉领域的研究重心从静态图片开始转向动态的控制。大量的仿真模拟平台涌现而出(例如虚拟驾驶平台Carla, 虚拟无人机平台Airsim)。
 
-![](https://media.giphy.com/media/26gsizMFdyLiLdpLO/giphy-downsized-large.gif)
+![](https://hsto.org/web/8d6/0b2/d87/8d60b2d875ab4206a47bc2f1e19eb53e.gif)
 
 传统机器人领域倾向于将一个复杂的任务分成感知(perception)模块和决策(planning)模块，而强化学习让我们可以端到端地学习到更复杂的控制(end to end control/sensorimotor control)，即输入为传感器信息，直接输出控制信号。目前最前沿的强化学习算法已经在很多端到端任务上获得了的成功，例如在游戏中学会解迷宫，在不平的路面上学会行走。在自动驾驶中，从摄像头拍到的画面，我们可以直接预测方向盘的转角和油门刹车。
 
-![](https://hsto.org/web/8d6/0b2/d87/8d60b2d875ab4206a47bc2f1e19eb53e.gif)
-
-![](http://i.imgur.com/tJp3p6s.gif)
+![](https://storage.googleapis.com/deepmind-live-cms/documents/ezgif.com-resize_8knzk3G.gif)
 
 这样的任务无法在静态的数据集（例如ImageNet）中学习。我们需要一个可交互式的动态环境。
 
@@ -48,7 +46,7 @@ Gibson Environment的名字来源于美国认知心理学之父James J. Gibson�
 
 近年来随着实景扫描技术的进步，有大量的楼房，住宅，真实场所被扫描并保存成了虚拟档案。最初，这样的档案主要被应用于房地产网络销售。
 
-![](http://buildingparser.stanford.edu/images/3Dmodal.png)
+![](http://gibson.vision/public/img/figure1.jpg)
 
 斯坦福视觉实验室（Stanford Vision Lab）是最早将这样的数据应用于科研的实验室。在[Stanford 2D3DS](http://buildingparser.stanford.edu/dataset.html)项目中，研究院将斯坦福大学6栋主要建筑进行了扫描，并取得了一系列突破。在此之后，被应用于科研的实景扫描数据量呈指数式增长。
 
